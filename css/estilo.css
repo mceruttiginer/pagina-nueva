@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #dee2ff;
+}
+
+header {
+  background-color: #fef5ed;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+}
+
+/* INDEX */
+.contenedorImagen {
+  margin-right: 20px;
+}
+
+.contenedorImagen ul {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedorImagen ul li {
+  list-style-type: none;
+  margin: 0 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  margin-left: 20px;
+  width: 20%;
+  height: 20%;
+}
+.imagenC {
+  width: 100%;
+  height: 70%;
+}
+h1 {
+  background-color: #fef5ed;
+  text-align: center;
+}
+
+.nosotros {
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid black;
+  background-color: azure;
+  text-align: center;
+}
+.textoNosotros {
+  text-align: center;
+  color: darkslategrey;
+}
+
+.fotoNosotros {
+  width: 300px;
+  height: 350px;
+}
+
+.galeria {
+  margin: 10px;
+  padding: 10px;
+}
+
+.footer texto {
+  position: absolute;
+  bottom: 0%;
+  margin: 20px;
+  color: black;
+}
+
+.footerIcono {
+  right: 20px;
+  position: fixed;
+  bottom: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #414833;
+  color: black;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.inicio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "h1 h1 h1"
+    "imagenPosada imagenPosada imagenPosada"
+    "nosotros nosotros nosotros"
+    "galeria galeria galeria"
+    "footer footer footer";
+}
+
+h1 {
+  grid-area: h1;
+}
+.imagenPosada {
+  grid-area: imagenPosada;
+}
+.nosotros {
+  grid-area: nosotros;
+}
+.galeria {
+  grid-area: galeria;
+}
+.footer {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+  .grillaInstalaciones {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "header header"
+    "h1 h1"
+    "imagenPosada imagenPosada"
+    "nosotros nosotros"
+    "galeria galeria"
+    "footer footer"
+    ;
+  }
+
+  .contenedorImagen ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* FORMULARIO */
+.contenedorConsultas{
+    background-color: #24303c;
+    width: 400px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.contenedorConsultas h2{
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.control{
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #1f53c5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.boton{
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    border-radius: 4px;
+    border:none;
+    color: white;
+    text-transform: uppercase;
+    background: linear-gradient(to left top, #005aa7,#fffde4);
+    font-size: 20px;
+}
+
+.boton:hover{
+    cursor:pointer;
+    transform: translateY(-3px);
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1) .5s;
+}
+
+.boton:active{
+    transform:translateY(3px);
+}
+
+.control:focus{
+    height: 60px;
+}
+
+.divConsultas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "headerConsultas headerConsultas headerConsultas"
+    "h1Consultas h1Consultas h1Consultas"
+    "contenedorConsultas contenedorConsultas contenedorConsultas"
+    "footer footer footer";
+}
+.headerConsultas {
+  grid-area: headerConsultas;
+}
+.h1Consultas {
+  grid-area: h1Consultas;
+}
+.contenedorConsultas {
+  grid-area: contenedorConsultas;
+}
+.footer {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 768px) {
+  .divConsultas {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "headerConsultas headerConsultas"
+      "h1Consultas h1Consultas"
+      "contenedorConsultas contenedorConsultas"
+      "footer footer";
+  }
+
+  .contenedorImagen ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* INSTALACIONES */
+
+.grillaInstalaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "titulo titulo titulo"
+      "instalaciones1 instalaciones2 instalaciones3"
+      "instalaciones4 instalaciones5 instalaciones6"
+      "instalaciones7 instalaciones8 instalaciones9"
+      "footer footer footer";
+    gap: 20px;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: #fef5ed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+  }
+
+.menuHeader ul {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: right;
+}
+
+.menuHeader ul li,
+nav ul li {
+  list-style-type: none;
+  margin: 0 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: grey;
+}
+
+ul li a:hover {
+  color: black;
+}
+
+.titulo {
+  grid-area: titulo;
+  color: grey;
+  text-align: center;
+}
+
+.estiloInstalaciones {
+  display: flex;
+  justify-content: center;
+}
+
+.estiloInstalaciones img {
+  width: 50%;
+}
+
+.instalaciones1 {
+  grid-area: instalaciones1;
+}
+
+.instalaciones2 {
+  grid-area: instalaciones2;
+}
+
+.instalaciones3 {
+  grid-area: instalaciones3;
+}
+
+.instalaciones4 {
+  grid-area: instalaciones4;
+}
+
+.instalaciones5 {
+  grid-area: instalaciones5;
+}
+
+.instalaciones6 {
+  grid-area: instalaciones6;
+}
+
+.instalaciones7 {
+  grid-area: instalaciones7;
+}
+
+.instalaciones8 {
+  grid-area: instalaciones8;
+}
+
+.instalaciones9 {
+  grid-area: instalaciones9;
+}
+
+.footer texto {
+  position: absolute;
+  bottom: 0%;
+  margin: 20px;
+  color: black;
+}
+
+.footerIcono {
+  right: 20px;
+  position: fixed;
+  bottom: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #414833;
+  color: black;
+  border: 1px solid black;
+  margin: 10px;
+}
+@media screen and (max-width: 768px) {
+  .grillaInstalaciones {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header header"
+      "titulo titulo"
+      "instalaciones1 instalaciones2"
+      "instalaciones3 instalaciones4"
+      "instalaciones5 instalaciones6"
+      "instalaciones7 instalaciones8"
+      "instalaciones9 instalaciones9"
+      "footer footer";
+  }
+
+  .instalaciones9 {
+    display: none;
+  }
+
+  .menuHeader ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* RESERVAS */
+.divReservas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "headerReservas headerReservas headerReservas"
+      "tituloReservas tituloReservas tituloReservas"
+      "enlaceReservas enlaceReservas enlaceReservas"
+      "rio1 rio2 rio3"
+      "rio4 rio5 rio6"
+      "footer footer footer";
+    gap: 20px;
+  }
+  
+  .headerReservas {
+    grid-area: headerReservas;
+    background-color: #fef5ed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .menuReservas ul {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: right;
+  }
+  
+  .menuReservas ul li,
+  nav ul li {
+    list-style-type: none;
+    margin: 0 20px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: grey;
+  }
+  
+  ul li a:hover {
+    color: black;
+  }
+  
+  .tituloReservas {
+    grid-area: tituloReservas;
+    color: grey;
+    text-align: center;
+  }
+  .enlaceReservas {
+    grid-area: enlaceReservas;
+    color: #000;
+  }
+  
+  .enlaceReservas h2 {
+    color: #000;
+  }
+  .estiloRio {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .estiloRio img {
+    width: 50%;
+  }
+  
+  .rio1 {
+    grid-area: rio1;
+  }
+  
+  .rio2 {
+    grid-area: rio2;
+  }
+  
+  .rio3 {
+    grid-area: rio3;
+  }
+  
+  .rio4 {
+    grid-area: rio4;
+  }
+  
+  .rio5 {
+    grid-area: rio5;
+  }
+  
+  .rio6 {
+    grid-area: rio6;
+  }
+  
+  .footer texto {
+    position: absolute;
+    bottom: 0%;
+    margin: 20px;
+    color: black;
+  }
+  
+  .footerIcono {
+    right: 20px;
+    position: fixed;
+    bottom: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: #414833;
+    color: black;
+    border: 1px solid black;
+    margin: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    .divReservas {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+      "headerReservas headerReservas"
+      "tituloReservas tituloReservas"
+      "enlaceReservas enlaceReservas"
+      "rio1 rio2"
+      "rio3 rio4"
+      "rio5 rio6"
+      "footer footer";
+    }
+  
+
+    .menuReservas ul {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* UBICACION */
+  .divUbicacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "headerUbicacion headerUbicacion headerUbicacion"
+      "tituloUbicacion tituloUbicacion tituloUbicacion"
+      "enlaceUbicacion enlaceUbicacion enlaceUbicacion"
+      "footer footer footer";
+    gap: 20px;
+  }
+  
+  .headerUbicacion {
+    grid-area: headerUbicacion;
+    background-color: #fef5ed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .contenedorUbicacion ul {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: right;
+  }
+  
+  .contenedorUbicacion ul li,
+  nav ul li {
+    list-style-type: none;
+    margin: 0 20px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: grey;
+  }
+  
+  ul li a:hover {
+    color: black;
+  }
+  
+  .tituloUbicacion {
+    grid-area: tituloUbicacion;
+    color: grey;
+    text-align: center;
+  }
+  .enlaceUbicacion {
+    grid-area: enlaceUbicacion;
+    color: #000;
+    text-align: center;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .divUbicacion {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+      "headerUbicacion headerUbicacion"
+      "tituloUbicacion tituloUbicacion"
+      "enlaceUbicacion enlaceUbicacion"
+      "footer footer";
+    }
+  
+
+    .contenedorUbicacion ul {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
